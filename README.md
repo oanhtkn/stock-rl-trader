@@ -40,7 +40,7 @@ stock-rl-trader/
 ├── requirements.txt                 # Python dependencies
 ├── README.md
 └── LICENSE
-
+```
 ---
 
 ## 3. Data Sources
