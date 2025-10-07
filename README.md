@@ -10,32 +10,34 @@ The goal is to maximize portfolio returns using Proximal Policy Optimization (PP
 ---
 
 ## 2. Project Structure
+```text
 stock-rl-trader/
 │
 ├── data/
-│   ├── raw/                      # Original Kaggle datasets
-│   └── processed/                # Cleaned and enriched dataset
+│   ├── raw/                         # Original Kaggle datasets (excluded from GitHub)
+│   └── processed/                   # Cleaned, merged, and feature-enriched dataset
 │
 ├── notebooks/
-│   ├── 01_data_preparation.ipynb
-│   ├── 02_agent_training.ipynb
-│   ├── 03_agent_evaluation.ipynb
-│   └── test.ipynb
+│   ├── 01_data_preparation.ipynb    # Data cleaning, merging, sentiment + indicators
+│   ├── 02_agent_training.ipynb      # PPO reinforcement learning agent training
+│   ├── 03_agent_evaluation.ipynb    # Performance evaluation and visualization
+│   └── test.ipynb                   # Quick environment testing
 │
 ├── models/
-│   └── ppo_trading_agent.zip     # Trained PPO model (local only)
+│   └── ppo_trading_agent.zip        # Trained PPO model (local only)
 │
 ├── app/
 │   ├── envs/
-│   │   └── trading_env.py        # Custom Gymnasium trading environment
+│   │   ├── __init__.py
+│   │   └── trading_env.py           # Custom Gymnasium trading environment
 │   └── dashboard/
-│       └── app.py                # Streamlit dashboard for visualization
+│       └── app.py                   # Streamlit dashboard for interactive visualization
 │
 ├── utils/
-│   ├── indicators.py             # RSI, MACD, EMA calculations
-│   └── sentiment.py              # News sentiment scoring
+│   ├── indicators.py                # Technical indicator calculations (RSI, MACD, EMA)
+│   └── sentiment.py                 # NLP sentiment extraction using TextBlob
 │
-├── requirements.txt
+├── requirements.txt                 # Python dependencies
 ├── README.md
 └── LICENSE
 
